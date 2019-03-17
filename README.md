@@ -4,7 +4,7 @@ Path ORAM is a simple oblivious RAM algorithm. While using cloud platform or any
 ## Path Oram Implementation
 Path ORAM uses a binary tree to store all memory blocks. Each node of the tree is
 a bucket which can contain a fixed number of block. First, we define all necessary data
-structure. The depth of the tree is log_2(N). The empty blocks are filled with dummy
+structure. The depth of the tree is `ceiling(logN)`. The empty blocks are filled with dummy
 data. Each leaf node is a distinct branch and each block is mapped to a random branch.
 For each operation, we perform read and write through the branch. Since, the blocks
 are positioned to different branches, repeated operations do not disclose any information. A
@@ -19,7 +19,7 @@ numpy to obtain uniformly distributed random integer.
 
 ## Performance
 For each access, we go through the whole path twice, once for reading and again for writing.
-So, we need to access twice the depth of the tree. Since, depth is dlog2(N)e, the performance
+So, we need to access twice the depth of the tree. Since, depth is `ceiling(logN)`, the performance
 also sticks to that.
 
 ## Unit Test
