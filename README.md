@@ -11,8 +11,7 @@ are positioned to different branches, repeated operations do not disclose any in
 local memory is used to read and re-write the data. Path ORAM uses limited amount of
 memory and bandwidth with respect to other oblivious algorithms.
 
-
-## Security
+##Security
 Path ORAM changes the location of block repeatedly and accesses the whole branch for
 a single block. Therefore, the pattern of access is always random. However, the security is
 dependent mostly on the random branch selection of the blocks. We used python package
