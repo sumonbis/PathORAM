@@ -1,5 +1,5 @@
 # PathORAM
-Path ORAM is a simple oblivious RAM algorithm. While using cloud platform or any other insecure memory, attack can be made using the access pattern. Oblivious RAM is the way to hide the memory access pattern with some extra bandwidth and memory overhead.
+Path ORAM is a simple oblivious RAM algorithm. While using cloud platform or any other insecure memory, attack can be made using the access pattern. Oblivious RAM is the way to hide the memory access pattern with some extra bandwidth and memory overhead. T
 
 ## Path Oram Implementation
 Path ORAM uses a binary tree to store all memory blocks. Each node of the tree is
@@ -9,7 +9,9 @@ data. Each leaf node is a distinct branch and each block is mapped to a random b
 For each operation, we perform read and write through the branch. Since, the blocks
 are positioned to different branches, repeated operations do not disclose any information. A
 local memory is used to read and re-write the data. Path ORAM uses limited amount of
-memory and bandwidth with respect to other oblivious algorithms.
+memory and bandwidth with respect to other oblivious algorithms. This is an implementation described in the following paper:
+
+https://people.csail.mit.edu/devadas/pubs/PathORam.pdf
 
 ## Security
 Path ORAM changes the location of block repeatedly and accesses the whole branch for
@@ -31,6 +33,6 @@ repeat the same set of blocks.
 ## How to Run
 ### Command Line
 
-- python path_oram.py <input_file> <output_file>
+- python `path_oram.py <input_file> <output_file>`
 
-- Example run: path_oram.py in.txt out.txt
+- Example run: `path_oram.py in.txt out.txt`
