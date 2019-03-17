@@ -9,9 +9,7 @@ data. Each leaf node is a distinct branch and each block is mapped to a random b
 For each operation, we perform read and write through the branch. Since, the blocks
 are positioned to different branches, repeated operations do not disclose any information. A
 local memory is used to read and re-write the data. Path ORAM uses limited amount of
-memory and bandwidth with respect to other oblivious algorithms. This is an implementation described in the following paper:
-
-https://people.csail.mit.edu/devadas/pubs/PathORam.pdf
+memory and bandwidth with respect to other oblivious algorithms. This is an implementation described in the following paper: https://people.csail.mit.edu/devadas/pubs/PathORam.pdf
 
 ## Security
 Path ORAM changes the location of block repeatedly and accesses the whole branch for
